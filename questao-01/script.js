@@ -9,9 +9,16 @@ buttonSubmitValue.addEventListener('click', factorPicker);
 
 // FUNCTIONS
 function factorPicker(){
-    let factor = timesTable(inputValueA.value);
-    factor(inputValueB.value);
-    console.log(factor(inputValueB.value));
+    if(inputValueA.value == "" || inputValueB.value == ""){
+        console.log('determine valores para ambos os campos')
+        displayResultList.innerHTML = `<li>determine valores para ambos os campos</li>`
+    }else{
+        let factor = timesTable(inputValueA.value);
+        factor(inputValueB.value);
+        console.log(factor(inputValueB.value));
+        displayResultList.innerHTML = `<li>${factor(inputValueB.value)}</li>`
+    }
+    
 };
 
 function timesTable(mainValue){
