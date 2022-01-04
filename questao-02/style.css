@@ -1,0 +1,27 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    font-size: 18px;
+    max-width: 500px;
+}
+
+h1{
+    font-size: 1.65em;
+}
+
+p:first-of-type::before {
+    content: url("assets/elevator-buttons.jpg");
+}
+
+p {
+    font-size: 1em;
+    text-align: justify;
+}
+
+button {
+    width: 1.65em;
+    font-size: 1em;
+    border-radius: 50%;
+}
